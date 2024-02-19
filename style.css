@@ -9,17 +9,17 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 @font-face {
     font-family: 'Title';
     src: url('Fonts/watcher-font/WatcherPersonalUseBold-BWexB.ttf') format('truetype');
-  }
+}
 
 @font-face {
     font-family: 'Signature1';
     src: url('Fonts/creattion-demo/Creattion\ Demo.otf') format('opentype');
-  }
+}
 
 .background-container{
     display: flex;
@@ -42,7 +42,7 @@ html {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
-  }
+}
 
 nav{
     display: flex;
@@ -65,7 +65,6 @@ nav{
 span{
     font-family: 'Title', sans-serif;
     color: beige;
-
 }
 
 nav ul li{
@@ -78,8 +77,9 @@ nav ul li a{
     color: white;
     font-family: 'Montserrat';
     text-decoration: none;
-    font-weight: bolder;
+    font-weight: medium;
     font-size: larger;
+    letter-spacing: 5px;
     text-transform: capitalize;
 }
 
@@ -118,8 +118,11 @@ h3{
     font-family: 'Montserrat';
     color: white;
     font-size: 25px;
+    font-weight: light; /* Make text thin */
+    letter-spacing: 10px; /* Add wide spacing */
     text-align: center;
     display: block;
+    text-transform: uppercase; /* Convert text to all caps */
 }
 
 h4{
@@ -146,11 +149,10 @@ h4{
 .bio-text{
     width: 80%;
     margin-left: 5%;
-    
 }
 
 .bio-par{
-    max-height: 700px;
+    max-height: 670px;
     overflow: auto;
 }
 
@@ -228,6 +230,7 @@ h4{
     text-align: center;
     margin: 20px 0px;
     color: #d81522;
+    overflow: hidden;
 }
 
 h5{
@@ -235,6 +238,7 @@ h5{
     color: white;
     font-size: 70px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .par p{
@@ -243,8 +247,18 @@ h5{
     line-height: 27px;
     margin-bottom: 25px;
     overflow: auto;  
-    max-height: 500px;
+    max-height: 100%;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    position: sticky;
+    bottom: 0;
+}
+
 
 .card .button {
     background-color: #d81522;
@@ -257,7 +271,7 @@ h5{
     border-radius: 30px;
     transition: .4s;
     height: auto;
-    
+    box-shadow: 0 0 13px rgba(255, 255, 255, 0.5);
 }
 
 .card .button:hover{
@@ -265,4 +279,90 @@ h5{
     color: white;
     border: 2px solid #d81522;
     cursor: pointer;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 40px;
+    }
+
+    .biography img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .bio-text {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 480px) {
+        .logo {
+            font-size: 30px;
+        }
+
+        .biography img {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .biography h2 {
+            font-size: 60px;
+            text-align: center;
+        }
+    }
+
+    .title h2 {
+        font-size: 60px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    h5 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 30px;
+    }
+
+    .biography img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .bio-text {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .biography h2 {
+        font-size: 40px;
+    }
+
+    .title h2 {
+        font-size: 40px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    h5 {
+        font-size: 40px;
+    }
 }
